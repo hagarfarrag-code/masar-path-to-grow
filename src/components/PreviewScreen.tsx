@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, BarChart3, Coins } from 'lucide-react';
+import { Shield, BarChart3, Coins } from 'lucide-react';
 import SecuredFooter from './SecuredFooter';
 import { Button } from '@/components/ui/button';
 import masarLogo from '@/assets/masar-logo.png';
@@ -68,13 +68,15 @@ const PreviewScreen = ({ onStart }: PreviewScreenProps) => {
       >
         {/* CTA Button */}
         <Button size="lg" className="w-full mb-4" onClick={onStart}>
-          Explore the Demo
-          <ArrowRight className="w-5 h-5" />
+          Get started
         </Button>
 
-        {/* Subtitle */}
-        <p className="text-center text-sm text-muted-foreground mb-4">
-          A clickable prototype for Egyptian investors
+        {/* Sign in link */}
+        <p className="text-center text-sm mb-4">
+          <span className="text-muted-foreground">Already have an account? </span>
+          <button onClick={onStart} className="text-primary hover:underline font-medium">
+            Sign in
+          </button>
         </p>
         <SecuredFooter />
       </motion.div>
