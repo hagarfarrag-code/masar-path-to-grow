@@ -18,7 +18,7 @@ const PreviewScreen = ({ onStart }: PreviewScreenProps) => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="mb-8"
+          className="mb-8 bg-background rounded-2xl p-4"
         >
           <img 
             src={masarLogo} 
