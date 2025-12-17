@@ -7,9 +7,9 @@ interface QuickActionsProps {
 
 const QuickActions = ({ onNavigate }: QuickActionsProps) => {
   const actions = [
-    { icon: Plus, label: 'Invest', color: 'bg-primary text-primary-foreground', action: () => onNavigate?.('products') },
-    { icon: ArrowDownLeft, label: 'Add Funds', color: 'bg-accent text-accent-foreground', action: () => {} },
-    { icon: TrendingUp, label: 'Insights', color: 'bg-secondary text-secondary-foreground', action: () => onNavigate?.('insights') },
+    { icon: Plus, label: 'Invest', color: 'bg-gradient-to-r from-primary to-primary/80 text-white border border-primary/60 shadow-luxury', action: () => onNavigate?.('products') },
+    { icon: ArrowDownLeft, label: 'Add Funds', color: 'bg-gradient-to-r from-primary/20 to-primary/15 text-foreground border border-primary/30', action: () => {} },
+    { icon: TrendingUp, label: 'Insights', color: 'bg-gradient-to-r from-primary/20 to-primary/15 text-foreground border border-primary/30', action: () => onNavigate?.('insights') },
   ];
 
   return (

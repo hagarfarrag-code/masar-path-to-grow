@@ -60,6 +60,38 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## 🎨 Design System & Color Scheme
+
+MASAR uses a **luxury dark gold theme** designed for sophisticated investors:
+
+### Primary Colors
+- **Primary Gold**: `hsl(45, 85%, 35%)` - Main brand color for buttons, highlights, and key elements
+- **Primary Foreground**: `hsl(0, 0%, 100%)` - White text on gold backgrounds
+- **Accent Gold**: `hsl(45, 85%, 45%)` - Lighter gold for secondary elements
+
+### Color Usage Guidelines
+- **Buttons**: Use primary gold gradient with white text
+- **Headers**: Gold gradient text for premium feel
+- **Badges**: Dark gold background with white text
+- **Icons**: Gold backgrounds with white icons
+- **Borders**: Gold borders for premium elements
+- **Shadows**: Gold-tinted shadows for luxury effect
+
+### CSS Variables
+```css
+--primary: 45 85% 35%;
+--primary-foreground: 0 0% 100%;
+--accent: 45 85% 45%;
+--gradient-luxury: linear-gradient(135deg, hsl(45 85% 35%) 0%, hsl(45 85% 45%) 50%, hsl(45 85% 55%) 100%);
+```
+
+### Tailwind Classes
+- Primary: `bg-primary`, `text-primary`, `border-primary`
+- Gradients: `bg-gradient-to-r from-primary to-primary/80`
+- Text: Always use `text-white` on gold backgrounds for accessibility
+
+**Important**: All new components must follow this luxury gold theme for brand consistency.
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.

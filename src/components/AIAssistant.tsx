@@ -200,14 +200,14 @@ const AIAssistant = ({ onNavigate, onSelectProduct }: AIAssistantProps) => {
       {/* AI Assistant Button */}
       <motion.button
         onClick={() => setIsOpen(true)}
-        className="relative bg-gradient-to-r from-purple-500 to-blue-500 text-white w-12 h-12 rounded-xl shadow-soft hover:shadow-elevated transition-all duration-200 active:scale-95 flex items-center justify-center"
+        className="relative bg-gradient-to-r from-primary via-primary/90 to-primary/80 text-white w-12 h-12 rounded-xl shadow-luxury hover:shadow-elevated transition-all duration-200 active:scale-95 flex items-center justify-center border border-primary/60"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
         <Bot className="w-5 h-5" />
         
-        {/* Notification dot */}
-        <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse" />
+        {/* Premium indicator */}
+        <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-primary/80 to-primary rounded-full animate-pulse border border-primary/40" />
       </motion.button>
 
       {/* AI Assistant Modal */}
@@ -231,11 +231,11 @@ const AIAssistant = ({ onNavigate, onSelectProduct }: AIAssistantProps) => {
               {/* Header */}
               <div className="flex items-center justify-between p-4 border-b border-border">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gradient-to-r from-primary via-primary/90 to-primary/80 rounded-full flex items-center justify-center border border-primary/60">
                     <Bot className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground">AI Investment Advisor</h3>
+                    <h3 className="font-semibold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">Elite Investment Advisor</h3>
                     <p className="text-xs text-muted-foreground">
                       {isTyping ? 'Thinking...' : 'Online'}
                     </p>

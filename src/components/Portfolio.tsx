@@ -25,7 +25,7 @@ const Portfolio = () => {
         animate={{ opacity: 1, y: 0 }}
         className="px-6 pt-6 pb-4"
       >
-        <h1 className="text-2xl font-bold text-foreground">Your Portfolio</h1>
+        <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">Elite Portfolio</h1>
         <p className="text-muted-foreground mt-1">Track your investment performance</p>
       </motion.div>
 

@@ -6,6 +6,7 @@ import { formatCurrency, formatPercent } from '@/lib/format';
 import PortfolioChart from './PortfolioChart';
 import InsightCards from './InsightCards';
 import QuickActions from './QuickActions';
+import RecentTransactions from './RecentTransactions';
 import SecuredFooter from './SecuredFooter';
 
 interface DashboardProps {
@@ -45,9 +46,9 @@ const Dashboard = ({ onNavigate }: DashboardProps) => {
         transition={{ delay: 0.1 }}
         className="px-6 mb-6"
       >
-        <div className="bg-card rounded-2xl p-6 shadow-elevated">
+        <div className="luxury-card rounded-2xl p-6 shadow-luxury animate-glow">
           <p className="text-sm text-muted-foreground mb-1">Total Portfolio Value</p>
-          <h2 className="text-3xl font-bold text-foreground mb-2">
+          <h2 className="text-3xl font-bold luxury-text mb-2">
             {formatCurrency(user.portfolioValue)}
           </h2>
           <div className="flex items-center gap-2">
@@ -82,7 +83,7 @@ const Dashboard = ({ onNavigate }: DashboardProps) => {
         className="px-6 mb-6"
       >
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-foreground">Market Insights</h3>
+          <h3 className="text-lg font-semibold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">Elite Market Intelligence</h3>
           <Button variant="ghost" size="sm" className="text-primary" onClick={() => onNavigate?.('insights')}>
             View all
             <ArrowUpRight className="w-4 h-4" />
@@ -90,7 +91,7 @@ const Dashboard = ({ onNavigate }: DashboardProps) => {
         </div>
         
         {/* Quick Stats */}
-        <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-4 mb-4">
+        <div className="bg-gradient-to-r from-primary/10 via-primary/8 to-primary/12 rounded-2xl p-4 mb-4 border border-primary/20 shadow-luxury">
           <div className="grid grid-cols-3 gap-4 text-center">
             <div>
               <p className="text-lg font-bold text-foreground">47,892</p>
@@ -109,8 +110,9 @@ const Dashboard = ({ onNavigate }: DashboardProps) => {
 
         {/* Featured Insight */}
         <div className="bg-card rounded-2xl p-5 shadow-card relative overflow-hidden">
-          <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
-            🔥
+          <div className="absolute top-4 right-4 bg-gradient-to-r from-primary via-primary/90 to-primary/80 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 shadow-luxury">
+            <div className="w-2 h-2 bg-primary/70 rounded-full animate-pulse"></div>
+            PREMIUM
           </div>
           
           <div className="flex items-start gap-3 mb-3">
@@ -139,15 +141,21 @@ const Dashboard = ({ onNavigate }: DashboardProps) => {
         </div>
       </motion.div>
 
-      {/* Insights */}
+      {/* Recent Transactions */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
         className="px-6"
       >
-        <h3 className="text-lg font-semibold text-foreground mb-4">Insights for you</h3>
-        <InsightCards insights={insights} />
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-semibold text-foreground">Recent transactions</h3>
+          <Button variant="ghost" size="sm" className="text-primary">
+            View all
+            <ArrowUpRight className="w-4 h-4" />
+          </Button>
+        </div>
+        <RecentTransactions />
       </motion.div>
 
       <div className="px-6 pb-4">

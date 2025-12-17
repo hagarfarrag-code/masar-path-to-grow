@@ -23,8 +23,20 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "hsl(45, 85%, 35%)", // Darker custom gold
+          foreground: "hsl(0, 0%, 100%)",
+        },
+        gold: {
+          50: "hsl(45, 85%, 95%)",
+          100: "hsl(45, 85%, 85%)",
+          200: "hsl(45, 85%, 70%)",
+          300: "hsl(45, 85%, 55%)",
+          400: "hsl(45, 85%, 45%)",
+          500: "hsl(45, 85%, 35%)", // Main darker gold
+          600: "hsl(45, 85%, 30%)",
+          700: "hsl(45, 85%, 25%)",
+          800: "hsl(45, 85%, 20%)",
+          900: "hsl(45, 85%, 15%)",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",

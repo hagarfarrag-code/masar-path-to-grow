@@ -160,10 +160,17 @@ const PublicInsights = () => {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="px-6 pt-6 pb-4 bg-card border-b border-border"
+        className="px-6 pt-6 pb-6 bg-gradient-to-r from-card via-card to-secondary/20 border-b border-primary/20"
       >
-        <h1 className="text-2xl font-bold text-foreground">Public Insights</h1>
-        <p className="text-muted-foreground mt-1">Investment trends and community updates</p>
+        <div className="flex items-center gap-3 mb-2">
+          <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary/80 rounded-lg flex items-center justify-center">
+            <TrendingUp className="w-4 h-4 text-white" />
+          </div>
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+            Elite Insights
+          </h1>
+        </div>
+        <p className="text-muted-foreground">Exclusive investment intelligence & market trends</p>
         
         {/* Timeframe Selector */}
         <div className="flex gap-2 mt-4">
@@ -215,7 +222,10 @@ const PublicInsights = () => {
         transition={{ delay: 0.1 }}
         className="px-6 py-4"
       >
-        <h3 className="text-sm font-semibold text-foreground mb-3">🔥 Trending in Egypt</h3>
+        <h3 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
+          <div className="w-2 h-2 bg-gradient-to-r from-primary to-primary/80 rounded-full"></div>
+          Trending in Egypt
+        </h3>
         <div className="flex gap-2 overflow-x-auto pb-2">
           {['#EGX30Rally', '#CBEPolicy', '#YoungInvestors', '#SuezCanal', '#NewCapital', '#InflationHedge'].map((tag) => (
             <button
@@ -240,10 +250,11 @@ const PublicInsights = () => {
               transition={{ delay: index * 0.1 }}
               className="bg-card rounded-2xl p-5 shadow-card relative overflow-hidden"
             >
-              {/* Hot Badge */}
+              {/* Premium Badge */}
               {post.isHot && (
-                <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
-                  🔥
+                <div className="absolute top-4 right-4 bg-gradient-to-r from-primary via-primary/90 to-primary/80 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 shadow-luxury">
+                  <div className="w-2 h-2 bg-primary/70 rounded-full animate-pulse"></div>
+                  PREMIUM
                 </div>
               )}
 

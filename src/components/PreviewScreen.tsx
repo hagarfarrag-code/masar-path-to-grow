@@ -23,7 +23,10 @@ const PreviewScreen = ({ onStart }: PreviewScreenProps) => {
           <img 
             src={masarLogo} 
             alt="MASAR - Your path to financial growth" 
-            className="w-48 h-auto"
+            className="w-48 h-auto logo-transparent"
+            style={{ 
+              filter: 'drop-shadow(0 0 20px rgba(237, 202, 14, 0.3))'
+            }}
           />
         </motion.div>
 
@@ -67,15 +70,15 @@ const PreviewScreen = ({ onStart }: PreviewScreenProps) => {
         className="px-6 pb-12"
       >
         {/* CTA Button */}
-        <Button size="lg" className="w-full mb-4" onClick={onStart}>
+        <Button size="lg" className="w-full mb-4 bg-gradient-to-r from-primary via-primary/90 to-primary/80 text-white font-bold border border-primary/60 shadow-luxury hover:shadow-elevated transition-all duration-300" onClick={onStart}>
           Get started
         </Button>
 
         {/* Sign in link */}
         <p className="text-center text-sm mb-4">
           <span className="text-muted-foreground">Already have an account? </span>
-          <button onClick={onStart} className="text-primary hover:underline font-medium">
-            Sign in
+          <button onClick={onStart} className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent hover:underline font-bold">
+            Elite Member Sign In
           </button>
         </p>
         <SecuredFooter />

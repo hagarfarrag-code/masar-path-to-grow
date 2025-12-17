@@ -223,22 +223,33 @@ The application uses Zustand for state management with the following key states:
 ## Design System
 
 ### Color Scheme
-- **Primary**: Green-based theme representing growth and prosperity
+- **Primary Gold**: `hsl(45, 85%, 35%)` - Luxury dark gold for premium branding
+- **Primary Foreground**: White text on gold backgrounds for optimal contrast
+- **Accent Gold**: `hsl(45, 85%, 45%)` - Lighter gold for secondary elements
 - **Success**: Green for positive returns and gains
 - **Warning**: Amber for medium risk indicators
 - **Destructive**: Red for losses and high risk
 - **Muted**: Gray tones for secondary information
 
+#### Luxury Design Principles
+- **Dark Gold Theme**: Sophisticated color palette targeting high-net-worth individuals
+- **Premium Gradients**: Gold gradients throughout the interface for luxury feel
+- **High Contrast**: White text on dark gold ensures accessibility
+- **Consistent Branding**: All interactive elements use the gold color system
+
 ### Typography
-- **Font Family**: DM Sans - Modern, readable font
-- **Hierarchy**: Clear heading and body text distinction
+- **Font Family**: Outfit - Premium, modern font for luxury branding
+- **Hierarchy**: Clear heading and body text distinction with gold gradient headings
 - **Responsive**: Scales appropriately across devices
+- **Luxury Text**: Gold gradient text for premium elements using `.luxury-text` class
 
 ### Components
-- **Cards**: Rounded corners with subtle shadows
-- **Buttons**: Multiple variants (primary, secondary, outline)
-- **Charts**: Clean, minimal design with branded colors
-- **Navigation**: Bottom navigation optimized for mobile
+- **Cards**: Luxury cards with gold borders and premium shadows (`.luxury-card` class)
+- **Buttons**: Dark gold gradients with white text for premium feel
+- **Charts**: Clean, minimal design with gold accent colors
+- **Navigation**: Bottom navigation with gold highlights for active states
+- **Badges**: Premium badges with dark gold backgrounds and white text
+- **Icons**: Gold backgrounds with white icons for luxury branding
 
 ## Animations & Interactions
 
@@ -267,6 +278,46 @@ The application uses Zustand for state management with the following key states:
 - **Optimized Images**: Proper image sizing and formats
 - **Minimal Bundle**: Tree-shaking and code splitting
 
+## Luxury Color Implementation
+
+### Color System Architecture
+The MASAR app uses a sophisticated dark gold color system implemented through:
+
+#### CSS Custom Properties
+```css
+:root {
+  --primary: 45 85% 35%;           /* Dark luxury gold */
+  --primary-foreground: 0 0% 100%; /* White text on gold */
+  --accent: 45 85% 45%;            /* Lighter gold accent */
+  
+  /* Luxury gradients */
+  --gradient-primary: linear-gradient(135deg, hsl(45 85% 35%), hsl(45 85% 45%));
+  --gradient-luxury: linear-gradient(135deg, hsl(45 85% 35%) 0%, hsl(45 85% 45%) 50%, hsl(45 85% 55%) 100%);
+  
+  /* Premium shadows */
+  --shadow-luxury: 0 10px 40px -10px hsl(45 85% 35% / 0.3);
+}
+```
+
+#### Tailwind Configuration
+```typescript
+primary: {
+  DEFAULT: "hsl(45, 85%, 35%)", // Dark luxury gold
+  foreground: "hsl(0, 0%, 100%)", // White text
+}
+```
+
+#### Usage Guidelines
+- **Primary Actions**: Use `bg-gradient-to-r from-primary to-primary/80 text-white`
+- **Headers**: Use `bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent`
+- **Premium Badges**: Use `bg-gradient-to-r from-primary via-primary/90 to-primary/80 text-white`
+- **Luxury Cards**: Use `.luxury-card` class for consistent premium styling
+
+#### Accessibility
+- All gold backgrounds use white text for WCAG AA compliance
+- Contrast ratio: 4.5:1 minimum for normal text
+- Focus states use gold ring with appropriate contrast
+
 ## Development Features
 
 ### Development Tools
@@ -292,6 +343,37 @@ The application uses Zustand for state management with the following key states:
 - **Local Products**: Egyptian Exchange (EGX) focused funds
 - **Regional Expansion**: MENA region investment options
 - **Regulatory Compliance**: Designed for Egyptian financial regulations
+
+## Color Scheme Maintenance
+
+### Adding New Components
+When creating new components, always follow these guidelines:
+
+1. **Use Primary Color System**: Never hardcode gold colors, use CSS variables or Tailwind classes
+2. **Text Contrast**: Always use white text on gold backgrounds
+3. **Consistent Gradients**: Use predefined gradient classes for uniformity
+4. **Premium Elements**: Apply `.luxury-card` and `.luxury-text` classes where appropriate
+
+### Code Examples
+```tsx
+// ✅ Correct - Using primary color system
+<button className="bg-gradient-to-r from-primary to-primary/80 text-white">
+  Premium Action
+</button>
+
+// ✅ Correct - Using luxury text class
+<h1 className="luxury-text">Elite Portfolio</h1>
+
+// ❌ Incorrect - Hardcoded colors
+<button className="bg-yellow-600 text-black">Action</button>
+```
+
+### Testing Color Changes
+Before implementing color changes:
+1. Test contrast ratios for accessibility
+2. Verify consistency across all components
+3. Check both light and dark theme compatibility
+4. Ensure mobile responsiveness
 
 ## Future Enhancements
 

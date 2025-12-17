@@ -57,8 +57,8 @@ const Profile = ({ onLogout }: ProfileProps) => {
         className="px-6 pt-6 pb-6"
       >
         <div className="flex items-center gap-4">
-          <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-            <span className="text-2xl font-bold text-primary">{user.name.charAt(0)}</span>
+          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-primary/20 to-primary/15 border-2 border-primary/30 flex items-center justify-center shadow-luxury">
+            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">{user.name.charAt(0)}</span>
           </div>
           <div>
             <h1 className="text-xl font-bold text-foreground">{user.name}</h1>
