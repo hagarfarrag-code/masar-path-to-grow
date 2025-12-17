@@ -104,7 +104,7 @@ const questions: Question[] = [
     title: 'How would you like to name your portfolio?',
     subtitle: 'Give a name to your portfolio. You can change your portfolio\'s name anytime.',
     inputType: 'text',
-    placeholder: 'My ISA portfolio'
+    placeholder: "Ahmed's portfolio"
   }
 ];
 
