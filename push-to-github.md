@@ -19,7 +19,7 @@ git push -u origin main
 ✅ **Portfolio Discovery** - Complete questionnaire with 9 questions and investor profiling
 ✅ **AI Investment Advisor** - Complete interactive chat interface
 ✅ **Public Insights Feed** - Social media-style investment news
-✅ **Wealth Tiers System** - Arabic tier names (Asas, Tamayoz, Nokhba)
+✅ **Wealth Tiers System** - Arabic tier names (Asas, Momayaz, Qema)
 ✅ **Explore Page** - Investment options and wealth information
 ✅ **Signup Flow** - Two-step signup with pre-populated demo data
 ✅ **Recent Transactions** - Egyptian market investment data
@@ -43,7 +43,7 @@ Once pushed to GitHub, Lovable will automatically:
 1. **Portfolio Discovery**: Comprehensive questionnaire covering financial situation, risk appetite, and account details with personalized investor profiling
 2. **AI Assistant**: Personalized investment advice with Egyptian market insights
 3. **Public Insights**: Community-driven investment feed with engagement metrics
-4. **Wealth Tiers**: Three-tier system (Asas, Tamayoz, Nokhba) with Arabic names and benefits
+4. **Wealth Tiers**: Three-tier system (Asas, Momayaz, Qema) with Arabic names and benefits
 5. **Explore Page**: Investment options including managed portfolios, savings, and long-term planning
 6. **Signup Flow**: Streamlined two-step signup with pre-populated demo data
 7. **Recent Transactions**: Egyptian investment data (CIB Money Market, Treasury Bonds, etc.)

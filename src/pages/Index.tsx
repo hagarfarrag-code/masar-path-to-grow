@@ -9,6 +9,7 @@ import Dashboard from '@/components/Dashboard';
 import Explore from '@/components/Explore';
 import WealthTiers from '@/components/WealthTiers';
 import PortfolioDiscovery from '@/components/PortfolioDiscovery';
+import AskUs from '@/components/AskUs';
 import Portfolio from '@/components/Portfolio';
 import Products from '@/components/Products';
 import ProductDetail from '@/components/ProductDetail';
@@ -179,6 +180,8 @@ const Index = () => {
             onShowPortfolioDiscovery={handleShowPortfolioDiscovery}
           />
         );
+      case 'askus':
+        return <AskUs />;
       case 'portfolio':
         return <Portfolio />;
       case 'insights':

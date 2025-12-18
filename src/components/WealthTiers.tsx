@@ -42,8 +42,8 @@ const WealthTiers = ({ onBack }: WealthTiersProps) => {
       ],
     },
     {
-      id: 'tamayoz',
-      nameEn: 'Tamayoz',
+      id: 'momayaz',
+      nameEn: 'Momayaz',
       nameAr: 'مميز',
       level: 'Premium',
       range: 'From 250,000 to 2,000,000 EGP invested',
@@ -78,9 +78,9 @@ const WealthTiers = ({ onBack }: WealthTiersProps) => {
       ],
     },
     {
-      id: 'nokhba',
-      nameEn: 'Nokhba',
-      nameAr: 'نخبة',
+      id: 'qema',
+      nameEn: 'Qema',
+      nameAr: 'قيمة',
       level: 'Private',
       range: 'Above 2,000,000 EGP invested',
       icon: '✨',

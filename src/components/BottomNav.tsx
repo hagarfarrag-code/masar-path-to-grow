@@ -1,4 +1,4 @@
-import { Home, BarChart3, User, Briefcase, Grid3X3 } from 'lucide-react';
+import { Home, BarChart3, User, Briefcase, Grid3X3, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface BottomNavProps {
@@ -10,9 +10,10 @@ const BottomNav = ({ activeTab, onTabChange }: BottomNavProps) => {
   const tabs = [
     { id: 'home', label: 'Home', icon: Home },
     { id: 'explore', label: 'Explore', icon: Grid3X3 },
+    { id: 'askus', label: 'Ask us', icon: MessageCircle },
     { id: 'portfolio', label: 'Portfolio', icon: Briefcase },
     { id: 'products', label: 'Products', icon: BarChart3 },
-    { id: 'profile', label:'Profile', icon: User },
+    { id: 'profile', label:'Ahmed', icon: User },
   ];
 
   return (

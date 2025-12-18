@@ -89,53 +89,56 @@ const Explore = ({ onNavigate, onShowWealthTiers, onShowPortfolioDiscovery }: Ex
         </div>
       </motion.div>
 
-      {/* Need more information section */}
+      {/* Elevate your investments section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
         className="px-6 mb-8"
       >
-        <h2 className="text-xl font-bold text-foreground mb-6">Need more information to build your portfolio?</h2>
-        
-        {/* Wealth tiers */}
-        <div className="luxury-card rounded-2xl p-6 mb-6 relative overflow-hidden">
+        <div className="luxury-card rounded-2xl p-6 relative overflow-hidden">
           <div className="absolute top-4 right-4">
             <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center transform rotate-12">
-              <CreditCard className="w-8 h-8 text-white" />
+              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                <span className="text-purple-600 font-bold text-lg">M</span>
+              </div>
             </div>
           </div>
           
-          <h3 className="text-xl font-bold text-foreground mb-3">Wealth tiers</h3>
-          <p className="text-muted-foreground mb-6 pr-20">
-            Our Wealth tiers give you access to the right guidance for you, evolving as your portfolio grows
+          <h3 className="text-xl font-bold text-foreground mb-3">Elevate your investments</h3>
+          <p className="text-muted-foreground mb-4 pr-20">
+            Upgrade for EGP 500/month* to unlock a dedicated Wealth Manager.
+          </p>
+          <p className="text-sm text-muted-foreground mb-6 pr-20">
+            *Minimum 3 months
           </p>
           
           <div className="space-y-3 mb-6">
             <div className="flex items-center gap-3">
               <Check className="w-5 h-5 text-success" />
-              <span className="text-foreground">Automated ongoing advice</span>
+              <span className="text-foreground">Analyse your investment portfolio</span>
             </div>
             <div className="flex items-center gap-3">
               <Check className="w-5 h-5 text-success" />
-              <span className="text-foreground">Varying levels of guidance</span>
+              <span className="text-foreground">Discuss and refine your financial goals</span>
             </div>
             <div className="flex items-center gap-3">
               <Check className="w-5 h-5 text-success" />
-              <span className="text-foreground">Unlock tiers as you grow</span>
+              <span className="text-foreground">Receive personalized investment advice</span>
             </div>
           </div>
           
           <button 
-            onClick={onShowWealthTiers}
-            className="luxury-text font-semibold hover:underline"
+            onClick={() => onNavigate?.('askus')}
+            className="bg-gradient-to-r from-primary to-primary/80 text-white px-6 py-3 rounded-full font-semibold hover:shadow-luxury transition-all duration-300 flex items-center gap-2"
           >
-            See more
+            Learn more
+            <ChevronRight className="w-5 h-5" />
           </button>
         </div>
 
         {/* Maximised returns */}
-        <div className="luxury-card rounded-2xl p-6 relative overflow-hidden">
+        <div className="luxury-card rounded-2xl p-6 relative overflow-hidden mt-6">
           <div className="absolute top-4 right-4">
             <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center transform rotate-12">
               <BarChart3 className="w-8 h-8 text-white" />
