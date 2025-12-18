@@ -89,13 +89,52 @@ const Explore = ({ onNavigate, onShowWealthTiers, onShowPortfolioDiscovery }: Ex
         </div>
       </motion.div>
 
-      {/* Elevate your investments section */}
+      {/* Need more information section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
         className="px-6 mb-8"
       >
+        <h2 className="text-xl font-bold text-foreground mb-6">Need more information to build your portfolio?</h2>
+        
+        {/* Wealth tiers */}
+        <div className="luxury-card rounded-2xl p-6 mb-6 relative overflow-hidden">
+          <div className="absolute top-4 right-4">
+            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center transform rotate-12">
+              <CreditCard className="w-8 h-8 text-white" />
+            </div>
+          </div>
+          
+          <h3 className="text-xl font-bold text-foreground mb-3">Wealth tiers</h3>
+          <p className="text-muted-foreground mb-6 pr-20">
+            Our Wealth tiers give you access to the right guidance for you, evolving as your portfolio grows
+          </p>
+          
+          <div className="space-y-3 mb-6">
+            <div className="flex items-center gap-3">
+              <Check className="w-5 h-5 text-success" />
+              <span className="text-foreground">Automated ongoing advice</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Check className="w-5 h-5 text-success" />
+              <span className="text-foreground">Varying levels of guidance</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Check className="w-5 h-5 text-success" />
+              <span className="text-foreground">Unlock tiers as you grow</span>
+            </div>
+          </div>
+          
+          <button 
+            onClick={onShowWealthTiers}
+            className="luxury-text font-semibold hover:underline"
+          >
+            See more
+          </button>
+        </div>
+
+        {/* Elevate your investments */}
         <div className="luxury-card rounded-2xl p-6 relative overflow-hidden">
           <div className="absolute top-4 right-4">
             <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center transform rotate-12">
@@ -134,39 +173,6 @@ const Explore = ({ onNavigate, onShowWealthTiers, onShowPortfolioDiscovery }: Ex
           >
             Learn more
             <ChevronRight className="w-5 h-5" />
-          </button>
-        </div>
-
-        {/* Maximised returns */}
-        <div className="luxury-card rounded-2xl p-6 relative overflow-hidden mt-6">
-          <div className="absolute top-4 right-4">
-            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center transform rotate-12">
-              <BarChart3 className="w-8 h-8 text-white" />
-            </div>
-          </div>
-          
-          <h3 className="text-xl font-bold text-foreground mb-3">Maximised returns</h3>
-          <p className="text-muted-foreground mb-6 pr-20">
-            Our portfolios outperform comparable investments
-          </p>
-          
-          <div className="space-y-3 mb-6">
-            <div className="flex items-center gap-3">
-              <Check className="w-5 h-5 text-success" />
-              <span className="text-foreground">Strategic investments</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Check className="w-5 h-5 text-success" />
-              <span className="text-foreground">Portfolio optimisation</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Check className="w-5 h-5 text-success" />
-              <span className="text-foreground">Minimised costs</span>
-            </div>
-          </div>
-          
-          <button className="luxury-text font-semibold hover:underline">
-            Our track record
           </button>
         </div>
       </motion.div>
