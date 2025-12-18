@@ -44,7 +44,7 @@ const AskUs = ({ onBack }: AskUsProps) => {
     {
       icon: Phone,
       title: 'Call us',
-      subtitle: 'Available from Monday to Friday (9:00 - 18:00)',
+      subtitle: 'Available from Sunday to Thursday (9:00 - 17:00)',
       action: () => {}
     },
     {
