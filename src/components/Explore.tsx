@@ -136,39 +136,42 @@ const Explore = ({ onNavigate, onShowWealthTiers, onShowPortfolioDiscovery }: Ex
         </div>
 
         {/* Elevate your investments */}
-        <div className="luxury-card rounded-2xl p-6 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-full">
-            <img 
-              src={wealthManagerImg} 
-              alt="Dedicated Wealth Manager" 
-              className="w-full h-full object-cover object-top rounded-r-2xl"
-            />
+        <div className="luxury-card rounded-2xl overflow-hidden">
+          <div className="flex">
+            <div className="flex-1 p-6">
+              <h3 className="text-xl font-bold text-success mb-3">Elevate your investments</h3>
+              <p className="text-muted-foreground mb-1">
+                Upgrade for <span className="text-foreground font-semibold">EGP 500/month*</span> to unlock a dedicated Wealth Manager.
+              </p>
+              <p className="text-xs text-muted-foreground mb-4">*Minimum 3 months</p>
+              
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-success shrink-0" />
+                  <span className="text-foreground text-sm">Analyse your investment portfolio</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-success shrink-0" />
+                  <span className="text-foreground text-sm">Discuss and refine your financial goals</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-success shrink-0" />
+                  <span className="text-foreground text-sm">Receive personalized investment advice</span>
+                </div>
+              </div>
+              
+              <button className="px-6 py-2 bg-gradient-to-r from-primary via-primary/90 to-primary/80 text-background font-bold rounded-full shadow-luxury hover:shadow-elevated transition-all duration-300">
+                Learn more
+              </button>
+            </div>
+            <div className="w-28 shrink-0">
+              <img 
+                src={wealthManagerImg} 
+                alt="Dedicated Wealth Manager" 
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
           </div>
-          
-          <h3 className="text-xl font-bold text-success mb-3">Elevate your investments</h3>
-          <p className="text-muted-foreground mb-1 pr-32">
-            Upgrade for <span className="text-foreground font-semibold">EGP 500/month*</span> to unlock a dedicated Wealth Manager.
-          </p>
-          <p className="text-xs text-muted-foreground mb-4">*Minimum 3 months</p>
-          
-          <div className="space-y-3 mb-6 pr-32">
-            <div className="flex items-center gap-3">
-              <Check className="w-5 h-5 text-success shrink-0" />
-              <span className="text-foreground text-sm">Analyse your investment portfolio</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Check className="w-5 h-5 text-success shrink-0" />
-              <span className="text-foreground text-sm">Discuss and refine your financial goals</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Check className="w-5 h-5 text-success shrink-0" />
-              <span className="text-foreground text-sm">Receive personalized investment advice</span>
-            </div>
-          </div>
-          
-          <button className="px-6 py-2 bg-gradient-to-r from-primary via-primary/90 to-primary/80 text-background font-bold rounded-full shadow-luxury hover:shadow-elevated transition-all duration-300">
-            Learn more
-          </button>
         </div>
       </motion.div>
 
