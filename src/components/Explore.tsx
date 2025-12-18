@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
-import { TrendingUp, Coins, Briefcase, Target, ChevronRight, Check, CreditCard } from 'lucide-react';
+import { TrendingUp, Coins, Briefcase, Target, ChevronRight, Check, CreditCard, BarChart3 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SecuredFooter from './SecuredFooter';
-import wealthManagerImg from '@/assets/wealth-manager.png';
 
 interface ExploreProps {
   onNavigate?: (tab: string) => void;
@@ -135,43 +134,37 @@ const Explore = ({ onNavigate, onShowWealthTiers, onShowPortfolioDiscovery }: Ex
           </button>
         </div>
 
-        {/* Elevate your investments */}
-        <div className="luxury-card rounded-2xl overflow-hidden">
-          <div className="flex">
-            <div className="flex-1 p-6">
-              <h3 className="text-xl font-bold text-success mb-3">Elevate your investments</h3>
-              <p className="text-muted-foreground mb-1">
-                Upgrade for <span className="text-foreground font-semibold">EGP 500/month*</span> to unlock a dedicated Wealth Manager.
-              </p>
-              <p className="text-xs text-muted-foreground mb-4">*Minimum 3 months</p>
-              
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-success shrink-0" />
-                  <span className="text-foreground text-sm">Analyse your investment portfolio</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-success shrink-0" />
-                  <span className="text-foreground text-sm">Discuss and refine your financial goals</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-success shrink-0" />
-                  <span className="text-foreground text-sm">Receive personalized investment advice</span>
-                </div>
-              </div>
-              
-              <button className="px-6 py-2 bg-gradient-to-r from-primary via-primary/90 to-primary/80 text-background font-bold rounded-full shadow-luxury hover:shadow-elevated transition-all duration-300">
-                Learn more
-              </button>
-            </div>
-            <div className="w-28 shrink-0">
-              <img 
-                src={wealthManagerImg} 
-                alt="Dedicated Wealth Manager" 
-                className="w-full h-full object-cover object-top"
-              />
+        {/* Maximised returns */}
+        <div className="luxury-card rounded-2xl p-6 relative overflow-hidden">
+          <div className="absolute top-4 right-4">
+            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center transform rotate-12">
+              <BarChart3 className="w-8 h-8 text-white" />
             </div>
           </div>
+          
+          <h3 className="text-xl font-bold text-foreground mb-3">Maximised returns</h3>
+          <p className="text-muted-foreground mb-6 pr-20">
+            Our portfolios outperform comparable investments
+          </p>
+          
+          <div className="space-y-3 mb-6">
+            <div className="flex items-center gap-3">
+              <Check className="w-5 h-5 text-success" />
+              <span className="text-foreground">Strategic investments</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Check className="w-5 h-5 text-success" />
+              <span className="text-foreground">Portfolio optimisation</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Check className="w-5 h-5 text-success" />
+              <span className="text-foreground">Minimised costs</span>
+            </div>
+          </div>
+          
+          <button className="luxury-text font-semibold hover:underline">
+            Our track record
+          </button>
         </div>
       </motion.div>
 
